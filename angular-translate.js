@@ -1,5 +1,6 @@
 /*!
- * angular-translate - v2.8.1 - 2015-12-24
+ * angular-translate-tp - v2.8.4 - 2016-07-08
+ * based on angular-translate - v2.8.1
  * 
  * Copyright (c) 2015 The angular-translate team, Pascal Precht; Licensed MIT
  */
@@ -2303,7 +2304,8 @@ function $translate($STORAGE_KEY, $windowProvider, $translateSanitizationProvide
 
         if (!result && result !== '') {
           // Return translation of default interpolator if not found anything.
-          result = defaultInterpolator.interpolate(translationId, interpolateParams);
+          // result = defaultInterpolator.interpolate(translationId, interpolateParams);
+          result = '';
           if ($missingTranslationHandlerFactory && !pendingLoader) {
             result = translateByHandler(translationId, interpolateParams);
           }
